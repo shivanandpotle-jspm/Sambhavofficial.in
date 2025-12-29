@@ -15,6 +15,7 @@ import { TeamPage } from "@/pages/TeamPage";
 import { DonatePage } from "@/pages/DonatePage";
 import { MembershipPage } from "@/pages/MembershipPage";
 import { AdminDashboard } from "@/pages/admin/AdminDashboard";
+import AdminEvents from "@/pages/admin/AdminEvents";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +43,7 @@ const App = () => (
             {/* Admin Routes */}
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
+              <Route path="events" element={<AdminEvents />} />
             </Route>
             
             <Route path="*" element={<NotFound />} />
