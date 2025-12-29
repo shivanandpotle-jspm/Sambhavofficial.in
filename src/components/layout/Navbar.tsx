@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link to="/admin">
+            <Link to="/admin/login">
               <Button variant="ghost" size="sm">
                 <Settings className="h-4 w-4" />
               </Button>
@@ -124,7 +124,7 @@ export const Navbar: React.FC = () => {
                   })}
 
                   <Link
-                    to="/admin"
+                    to="/admin/login"
                     onClick={() => setIsOpen(false)}
                     className="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-muted-foreground hover:text-foreground hover:bg-muted"
                   >
