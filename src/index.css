@@ -1,115 +1,118 @@
+/* ✅ IMPORTS MUST COME FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @layer base {
   :root {
-    /* Primary - Deep Teal (Trust, Stability) */
-    --primary: 175 60% 28%;
+    /* ===== BRAND COLORS (LIGHT MODE) ===== */
+    --primary: 215 100% 34%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 175 55% 40%;
-    --primary-dark: 175 65% 20%;
-    
-    /* Secondary - Warm Amber (Hope, Optimism) */
-    --secondary: 38 92% 55%;
-    --secondary-foreground: 38 95% 12%;
-    --secondary-light: 38 95% 70%;
-    
-    /* Accent - Coral (Energy, Compassion) */
-    --accent: 12 80% 60%;
-    --accent-foreground: 0 0% 100%;
-    
-    /* Backgrounds */
-    --background: 40 30% 98%;
-    --foreground: 200 20% 15%;
-    
-    /* Cards & Surfaces */
+    --primary-light: 215 100% 45%;
+    --primary-dark: 215 100% 25%;
+
+    --secondary: 191 100% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 191 100% 60%;
+
+    --accent: 43 100% 51%;
+    --accent-foreground: 215 100% 10%;
+
+    /* ===== LIGHT BACKGROUNDS ===== */
+    --background: 210 20% 98%;
+    --foreground: 215 100% 10%;
+
     --card: 0 0% 100%;
-    --card-foreground: 200 20% 15%;
-    
+    --card-foreground: 215 100% 10%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 200 20% 15%;
-    
-    /* Muted */
-    --muted: 40 20% 94%;
-    --muted-foreground: 200 10% 45%;
-    
-    /* Borders & Inputs */
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 175 60% 28%;
-    
-    /* Destructive */
-    --destructive: 0 72% 51%;
+    --popover-foreground: 215 100% 10%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 10% 45%;
+
+    --border: 215 30% 90%;
+    --input: 215 30% 90%;
+    --ring: 215 100% 34%;
+
+    --destructive: 32 100% 49%;
     --destructive-foreground: 0 0% 100%;
-    
-    /* Radius */
+
     --radius: 0.75rem;
-    
-    /* Custom Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(175 60% 28%) 0%, hsl(175 55% 40%) 50%, hsl(38 92% 55%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(12 80% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 30% 98%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(40 30% 98%) 0%, hsl(40 20% 94%) 100%);
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(200 20% 15% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(200 20% 15% / 0.12);
-    --shadow-glow: 0 0 40px hsl(175 60% 28% / 0.15);
-    --shadow-warm: 0 8px 30px -8px hsl(38 92% 55% / 0.3);
-    
-    /* Sidebar */
-    --sidebar-background: 175 60% 28%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 38 92% 55%;
-    --sidebar-primary-foreground: 38 95% 12%;
-    --sidebar-accent: 175 55% 35%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 175 50% 35%;
-    --sidebar-ring: 38 92% 55%;
+
+    /* ===== LIGHT GRADIENTS ===== */
+    --gradient-hero: linear-gradient(135deg, #004AAD 0%, #00B4D8 100%);
+    --gradient-warm: linear-gradient(135deg, #FFB703 0%, #FB8500 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(210 20% 98%) 0%, hsl(210 20% 94%) 100%);
+
+    --shadow-soft: 0 4px 20px -4px rgba(0, 74, 173, 0.1);
+    --shadow-card: 0 8px 30px -8px rgba(0, 74, 173, 0.15);
+    --shadow-glow: 0 0 40px rgba(0, 74, 173, 0.2);
   }
 
+  /* 🌙 DARK MODE — LOGO COLOR BASED */
   .dark {
-    --primary: 175 55% 45%;
-    --primary-foreground: 200 20% 10%;
-    --primary-light: 175 50% 55%;
-    --primary-dark: 175 60% 35%;
-    
-    --secondary: 38 90% 50%;
-    --secondary-foreground: 38 95% 10%;
-    
-    --accent: 12 75% 55%;
-    --accent-foreground: 0 0% 100%;
-    
-    --background: 200 25% 8%;
-    --foreground: 40 20% 95%;
-    
-    --card: 200 22% 12%;
-    --card-foreground: 40 20% 95%;
-    
-    --popover: 200 22% 12%;
-    --popover-foreground: 40 20% 95%;
-    
-    --muted: 200 20% 18%;
-    --muted-foreground: 40 15% 65%;
-    
-    --border: 200 18% 22%;
-    --input: 200 18% 22%;
-    --ring: 175 55% 45%;
-    
-    --destructive: 0 65% 45%;
-    --destructive-foreground: 0 0% 100%;
-    
-    --sidebar-background: 200 25% 10%;
-    --sidebar-foreground: 40 20% 95%;
-    --sidebar-primary: 38 90% 50%;
-    --sidebar-primary-foreground: 38 95% 10%;
-    --sidebar-accent: 200 22% 18%;
-    --sidebar-accent-foreground: 40 20% 95%;
-    --sidebar-border: 200 18% 22%;
-    --sidebar-ring: 38 90% 50%;
+    --background: 220 40% 6%;
+    --foreground: 210 30% 96%;
+
+    --card: 220 35% 12%;
+    --card-foreground: 210 30% 96%;
+    --popover: 220 35% 12%;
+    --popover-foreground: 210 30% 96%;
+
+    /* 🔵 #17a8db */
+    --primary: 197 80% 47%;
+    --primary-foreground: 220 40% 6%;
+
+    /* 🟡 #ebd37e */
+    --secondary: 45 70% 70%;
+    --secondary-foreground: 220 40% 6%;
+
+    /* 🟠 #e87037 */
+    --accent: 18 80% 56%;
+    --accent-foreground: 220 40% 6%;
+
+    --muted: 220 25% 18%;
+    --muted-foreground: 215 20% 70%;
+
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
+    --ring: 45 70% 70%;
+
+    --destructive: 18 80% 56%;
+    --destructive-foreground: 220 40% 6%;
+
+    --gradient-hero: linear-gradient(
+      135deg,
+      #17a8db 0%,
+      #ebd37e 50%,
+      #e87037 100%
+    );
+
+    --gradient-warm: linear-gradient(
+      135deg,
+      #ebd37e 0%,
+      #e87037 100%
+    );
+
+    --gradient-card: linear-gradient(
+      180deg,
+      hsl(220 35% 14%) 0%,
+      hsl(220 35% 10%) 100%
+    );
+
+    --gradient-section: linear-gradient(
+      180deg,
+      hsl(220 40% 8%) 0%,
+      hsl(220 35% 12%) 100%
+    );
+
+    --shadow-soft: 0 6px 24px -6px rgba(23, 168, 219, 0.35);
+    --shadow-card: 0 10px 40px -10px rgba(23, 168, 219, 0.45);
+    --shadow-glow: 0 0 60px rgba(235, 211, 126, 0.45);
   }
 }
 
@@ -125,106 +128,31 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+    @apply text-primary;
   }
 }
 
 @layer utilities {
-  .font-heading {
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .font-body {
-    font-family: 'Inter', sans-serif;
-  }
-  
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-hero);
   }
-  
+
   .bg-gradient-hero {
     background-image: var(--gradient-hero);
   }
-  
+
   .bg-gradient-warm {
     background-image: var(--gradient-warm);
   }
-  
-  .bg-gradient-card {
-    background-image: var(--gradient-card);
-  }
-  
-  .bg-gradient-section {
-    background-image: var(--gradient-section);
-  }
-  
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-  
-  .shadow-card {
-    box-shadow: var(--shadow-card);
-  }
-  
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
-  
-  .shadow-warm {
-    box-shadow: var(--shadow-warm);
-  }
 }
 
-/* Custom animations */
+/* Floating animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(175 60% 28% / 0.3); }
-  50% { box-shadow: 0 0 40px hsl(175 60% 28% / 0.5); }
-}
-
-@keyframes slide-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-
-.animate-shimmer {
-  animation: shimmer 2s linear infinite;
-  background-size: 200% 100%;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.animate-slide-up {
-  animation: slide-up 0.6s ease-out forwards;
-}
-
-.animate-fade-in {
-  animation: fade-in 0.4s ease-out forwards;
-}
-
-/* Stagger animation delays */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }

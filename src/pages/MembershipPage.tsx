@@ -104,7 +104,7 @@ export const MembershipPage: React.FC = () => {
               <Users className="h-10 w-10 text-secondary-foreground" />
             </div>
             <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-6">
-              Join Our Community
+              Join Our Team
             </h1>
             <p className="text-lg text-primary-foreground/80">
               Become a member and unlock exclusive benefits while contributing to meaningful change in society.

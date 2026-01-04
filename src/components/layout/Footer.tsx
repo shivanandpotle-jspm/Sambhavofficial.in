@@ -1,7 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  ArrowUp,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import sambhavLogo from './../../assets/sambhav_logo.png';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -35,7 +45,12 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-primary text-primary-foreground">
       {/* Wave Top */}
       <div className="absolute top-0 left-0 right-0 h-16 -translate-y-full overflow-hidden">
-        <svg className="absolute bottom-0 w-full h-16" viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
+        <svg
+          className="absolute bottom-0 w-full h-16"
+          viewBox="0 0 1440 64"
+          fill="none"
+          preserveAspectRatio="none"
+        >
           <path
             d="M0 64H1440V32C1440 32 1320 0 1080 16C840 32 720 48 480 48C240 48 120 16 0 32V64Z"
             fill="hsl(var(--primary))"
@@ -47,15 +62,20 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center">
-                <Heart className="h-6 w-6 text-secondary-foreground" />
-              </div>
-              <span className="font-heading text-2xl font-bold">Empower</span>
+            <Link to="/" className="flex items-center">
+              {/* ✅ LOGO ONLY */}
+              <img
+                src={sambhavLogo}
+                alt="Sambhav Logo"
+                className="h-12 w-auto object-contain"
+              />
             </Link>
+
             <p className="text-primary-foreground/80 leading-relaxed">
-              Empowering communities through financial literacy, entrepreneurship, and holistic development.
+              Empowering communities through financial literacy,
+              entrepreneurship, and holistic development.
             </p>
+
             <div className="flex flex-wrap gap-2 mt-4">
               {motos.map((moto) => (
                 <span
@@ -70,7 +90,9 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-heading text-lg font-semibold mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -87,7 +109,9 @@ export const Footer: React.FC = () => {
 
           {/* Get Involved */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Get Involved</h4>
+            <h4 className="font-heading text-lg font-semibold mb-4">
+              Get Involved
+            </h4>
             <ul className="space-y-3">
               {getInvolved.map((link) => (
                 <li key={link.label}>
@@ -104,24 +128,33 @@ export const Footer: React.FC = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Contact Us</h4>
+            <h4 className="font-heading text-lg font-semibold mb-4">
+              Contact Us
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-0.5 text-secondary" />
                 <span className="text-primary-foreground/80">
-                  123 Community Center Road<br />
+                  123 Community Center Road
+                  <br />
                   Mumbai, Maharashtra 400001
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-secondary" />
-                <a href="tel:+919876543210" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <a
+                  href="tel:+919876543210"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
                   +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-secondary" />
-                <a href="mailto:hello@empower.org" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <a
+                  href="mailto:hello@empower.org"
+                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                >
                   hello@empower.org
                 </a>
               </li>
@@ -145,7 +178,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} Empower Foundation. All rights reserved.
+            © {new Date().getFullYear()} Sambhav Foundation. All rights reserved.
           </p>
           <Button
             variant="ghost"
