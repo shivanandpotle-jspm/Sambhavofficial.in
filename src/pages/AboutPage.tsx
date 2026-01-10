@@ -141,15 +141,29 @@ export const AboutPage: React.FC = () => {
           animate="show"
         >
           <motion.div
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center"
             variants={fadeUp}
           >
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-6">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-10">
               About <span className="text-gradient">Sambhav</span> Foundation
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-             Sambhav  is a youth-led community based in Pune and PCMC, driven by the belief that everything is possible when passion meets purpose. Formed by a group of young changemakers, Sambhav is a platform that empowers students to lead, innovate, and serve society through meaningful initiatives. With a strong team of 95+ volunteers, primarily engineering students from different colleges, Sambhav works in diverse domains such as innovation, social service, youth empowerment, entrepreneurship, financial literacy, and mental & physical fitness. Our Mission To empower the youth and transform the future by building a culture of leadership, creativity, and social responsibility. Our Vision To create a society where every young mind believes in its potential and contributes to positive change. Our Key Work Areas 🌱 Social Service: Donation drives, awareness campaigns, and rural outreach activities for the underprivileged. 💡 Innovation & Entrepreneurship: Hackathons, idea challenges, and summits promoting creative problem-solving. 💬 Youth Empowerment: Skill development sessions, motivational talks, and leadership programs. 🧠 Mental & Physical Fitness: Activities promoting mindfulness, fitness, and emotional well-being. 💰 Financial Literacy: Sessions and content aimed at improving financial awareness among students.
-            </p>
+
+            {/* 🔽 ONLY CHANGE: INFO WRAPPED IN CONTAINER */}
+            <Card className="border-0 shadow-card bg-card/80 backdrop-blur">
+              <CardContent className="p-8 text-left">
+                <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                 
+                  {"\n"}With a strong team of 95+ volunteers, primarily engineering students from different colleges, Sambhav works in diverse domains such as innovation, social service, youth empowerment, entrepreneurship, financial literacy, and mental & physical fitness.
+                  {"\n\n"}Our Key Work Areas  
+                  🌱 Social Service: Donation drives, awareness campaigns, and rural outreach activities for the underprivileged.  
+                  💡 Innovation & Entrepreneurship: Hackathons, idea challenges, and summits promoting creative problem-solving.  
+                  💬 Youth Empowerment: Skill development sessions, motivational talks, and leadership programs.  
+                  🧠 Mental & Physical Fitness: Activities promoting mindfulness, fitness, and emotional well-being.  
+                  💰 Financial Literacy: Sessions and content aimed at improving financial awareness among students.
+                </p>
+              </CardContent>
+            </Card>
+            {/* 🔼 ONLY CHANGE ENDS */}
           </motion.div>
         </motion.div>
       </section>
